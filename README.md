@@ -1,0 +1,2 @@
+# PetBattleScripts
+Scripts for tdBattlePetScript
