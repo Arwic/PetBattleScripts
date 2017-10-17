@@ -10,8 +10,10 @@ endif
 change(Blighthawk) [self(Fjord Worg Pup).dead]
 ability(Howl) [self(Fjord Worg Pup).active & enemy(Tyri).active]
 change(#3) [self(Blighthawk).active & enemy(Puzzle).active & !self(#3).played]
+
 change(#3) [enemy(Tyri).dead & enemy(Puzzle).active & !self(#3).played]
 ability(Ghostly Bite) [self(Blighthawk).active & enemy(Tyri).active]
+standby [self(Blighthawk).active & enemy(Puzzle).active & self(#3).played & self.aura(Stunned).exists]
 ability(Ghostly Bite) [self(Blighthawk).active & enemy(Puzzle).active & self(#3).played & self.ability(Ghostly Bite).usable]
 ability(Infected Claw) [self(Blighthawk).active & enemy(Puzzle).active & self(#3).played & !self.ability(Ghostly Bite).usable]
 change(#2) [self(#3).active]
