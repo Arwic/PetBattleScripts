@@ -1,0 +1,6 @@
+if [ self(Unborn Val'kyr:1238).active ]
+    ability(Curse of Doom:218) [ !enemy.aura(Curse of Doom:217).exists ]
+    ability(Haunt:652)
+endif
+change(Snowfeather Hatchling:1974) [ self(Unborn Val'kyr:1238).dead ]
+ability(Falcosaur Swarm!:1773) [ self(Snowfeather Hatchling:1974).active ]

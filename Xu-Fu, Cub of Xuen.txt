@@ -1,0 +1,13 @@
+if [ self(Tranquil Mechanical Yeti:116).active ]
+    ability(Call Lightning:204) [ self.ability(Call Lightning:204).usable ]
+    change(Lil' Bling:1320)
+endif
+if [ self(Lil' Bling:1320).active ]
+    ability(Make it Rain:985) [ self.ability(Make it Rain:985).usable ]
+    ability(Inflation:1002)
+endif
+change(Clockwork Gnome) [ self(Lil' Bling:1320).dead ]
+if [ self(Clockwork Gnome).active ]
+    ability(Build Turret) [ enemy.aura(Turret).exists ]
+    ability(Metal Fist)
+endif

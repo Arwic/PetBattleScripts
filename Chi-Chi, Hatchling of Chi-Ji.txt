@@ -1,0 +1,17 @@
+if [ self(Shimmershell Snail:493).active ]
+    ability(Dive:564) [ enemy.aura(Ethereal).exists & self.ability(Dive:564).usable ]
+    ability(Acidic Goo:369) [ !enemy.aura(Acidic Goo:368).exists ]
+    ability(Ooze Touch:445)
+endif
+change(Rapana Whelk:743) [ self(Shimmershell Snail:493).dead ]
+ability(Ooze Touch:445) [ self(Rapana Whelk:743).active ]
+if [ self(Rapana Whelk:743).active ]
+    ability(Dive:564) [ enemy.aura(Ethereal).exists & self.ability(Dive:564).usable ]
+    ability(Acidic Goo:369) [ !enemy.aura(Acidic Goo:368).exists ]
+    ability(Ooze Touch:445)
+endif
+change(Arcane Eye:1160) [ self(Rapana Whelk:743).dead ]
+if [ self(Arcane Eye:1160).active ]
+    ability(Eyeblast:475) [self.ability(Eyeblast:475).usable]
+    ability(Focused Beams:473)
+endif

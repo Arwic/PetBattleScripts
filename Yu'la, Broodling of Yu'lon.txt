@@ -1,0 +1,7 @@
+if [ self(Mr Bigglesworth:1145).active ]
+    standby [ self.aura(Ice Barrier:480).exists ]
+    ability(Claw:429) [ round = 1 ]
+    ability(Ice Tomb:624) [ self.ability(Ice Tomb:624).usable ]
+    ability(Ice Barrier:479) [ self.ability(Ice Barrier:479).usable ]
+    ability(Claw:429)
+endif
