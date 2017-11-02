@@ -1,0 +1,20 @@
+ability(Bubble) [ self(Swamp Croaker).active & enemy(Socks).active & enemy.aura(Undead).exists ]
+if [ self(Swamp Croaker).active & enemy(Socks).active ]
+    ability(Swarm of Flies) [ self.round = 1 ]
+    ability(Tongue Lash)
+endif
+if [ self(Swamp Croaker).active & enemy(Monte).active ]
+    ability(Swarm of Flies) [ enemy.aura(Underground).exists ]
+    ability(Tongue Lash)
+endif
+change(Kun-Lai Runt) [ self(Swamp Croaker).dead ]
+if [ self(Kun-Lai Runt).active ]
+    ability(Rampage) [ self.ability(Rampage).usable ]
+    ability(Mangle) [ !enemy.aura(Mangle).exists ]
+    ability(Thrash)
+endif
+change(Tiny Sporebat) [ self(Kun-Lai Runt).dead ]
+if [ self(Tiny Sporebat).active & enemy(Rikki).active ]
+    ability(Confusing Sting) [ !enemy.aura(Confusing Sting).exists ]
+    ability(Slicing Wind)
+endif

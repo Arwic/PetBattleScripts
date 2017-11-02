@@ -1,0 +1,16 @@
+if [ self(Nether Faerie Dragon:557).active & enemy(Wisdom:1285).active ]
+    ability(Moonfire:595) [ self.ability(Moonfire:595).usable ]
+    ability(Arcane Blast:421)
+endif
+if [ self(Nether Faerie Dragon:557).active & enemy(Patience:1284).active ]
+    ability(Life Exchange:277) [ self.ability(Life Exchange:277).usable ]
+    ability(Arcane Blast:421)
+endif
+change(Mechanical Pandaren Dragonling:844) [ self(Nether Faerie Dragon:557).dead ]
+ability(Breath:115) [ self(Mechanical Pandaren Dragonling:844).active & enemy(Patience:1284).active ]
+if [ self(Mechanical Pandaren Dragonling:844).active & enemy(Knowledge:1283).active ]
+    ability(Decoy:334) [ enemy.aura(Failsafe).exists ]
+    ability(Decoy:334) [ enemy.aura(Amplify Magic).exists ]
+    ability(Bombing Run:647) [ self.ability(Bombing Run:647).usable ]
+    ability(Breath:115)
+endif

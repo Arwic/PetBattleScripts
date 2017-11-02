@@ -1,0 +1,14 @@
+if [ self(Chrominius:1152).active & enemy(Screamer:1269).active ]
+    ability(Howl:362) [ self.ability(Howl:362).usable & round != 1 ]
+    ability(Surge of Power:593) [ enemy.aura(Howl).exists ]
+    ability(Bite:110)
+endif
+change(Scourged Whelpling:538) [ self(Chrominius:1152).dead ]
+ability(Tail Sweep:122) [ self(Scourged Whelpling:538).active & enemy(Chaos:1271).active ]
+ability(Tail Sweep:122) [ self(Scourged Whelpling:538).active & enemy(Trike:1268).active ]
+change(Darkmoon Zeppelin:339) [ self(Scourged Whelpling:538).dead ]
+if [ self(Darkmoon Zeppelin:339).active & enemy(Trike:1268).active ]
+    ability(Bombing Run:647) [ self.ability(Bombing Run:647).usable ]
+    ability(Decoy:334) [ self.ability(Decoy:334).usable ]
+    ability(Missile:777)
+endif
