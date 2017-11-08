@@ -1,0 +1,29 @@
+if [ self(Ghostly Skull:190).active & enemy(Yen:1295).active & self(Ghostly Skull:190).hpp > 60 ]
+    ability(Ghostly Bite:654) [ self.ability(Ghostly Bite:654).usable ]
+    change(Fossilized Hatchling:266)
+endif
+if [ self(Fossilized Hatchling:266).active & enemy(Bolo:1292).active & self(Fossilized Hatchling:266).hpp > 99 ]
+    ability(BONESTORM:649) [ self.ability(BONESTORM:649).usable ]
+    change(Fossilized Hatchling:266)
+endif
+if [ self(Ghostly Skull:190).active & enemy(Bolo:1292).active & self(Ghostly Skull:190).hpp > 99 ]
+    ability(Death Coil:121) [ !self.aura(Blinded:1014).exists ]
+    change(Fossilized Hatchling:266)
+endif
+if [ self(Fossilized Hatchling:266).active & enemy(Bolo:1292).active & self(Fossilized Hatchling:266).hpp < 99 ]
+    change(Ghostly Skull:190) [ self(Fossilized Hatchling:266).dead ]
+    ability(BONESTORM:649) [ self.ability(BONESTORM:649).usable ]
+    ability(Bone Bite:648)
+endif
+if [ self(Ghostly Skull:190).active & enemy(Bolo:1292).active & self(Ghostly Skull:190).hpp < 99 ]
+    ability(Unholy Ascension:321) [ self.aura(Undead:242).exists ]
+    ability(Death Coil:121)
+endif
+if [ self(Ghostly Skull:190).active & enemy(Yen:1295).active & self(Ghostly Skull:190).hpp < 60 ]
+    ability(Unholy Ascension:321) [ self.aura(Undead:242).exists ]
+    ability(Death Coil:121)
+endif
+if [ self(Tiny Sporebat:167).active ]
+    ability(Creeping Fungus:743) [ !enemy.aura(Creeping Fungus:742).exists ]
+    ability(Shadow Slash:210)
+endif

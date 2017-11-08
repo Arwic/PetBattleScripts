@@ -1,0 +1,19 @@
+if [ self(Swamp Croaker:1182).active & enemy(Cindy:1299).active ]
+    ability(Bubble:934) [ round = 3 ]
+    ability(Swarm of Flies:232) [ !enemy.aura(Swarm of Flies:231).exists ]
+    ability(Swarm of Flies:232) [ enemy.aura(Undead:242).exists ]
+    ability(Tongue Lash:228)
+endif
+if [ self(Swamp Croaker:1182).active & enemy(Alex:1301).active ]
+    change(Scourged Whelpling:538) [ self(Swamp Croaker:1182).dead ]
+    ability(Tongue Lash:228)
+endif
+if [ self(Scourged Whelpling:538).active & enemy(Alex:1301).active ]
+    ability(Call Darkness:256) [ self.ability(Call Darkness:256).usable ]
+    ability(Dreadful Breath:668)
+endif
+if [ self(Scourged Whelpling:538).active & enemy(Dah'da:1300).active ]
+    ability(Call Darkness:256) [ self.ability(Call Darkness:256).usable ]
+    ability(Dreadful Breath:668)
+endif
+ability(Crush:406) [ self(Anubisath Idol:1155).active ]

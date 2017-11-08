@@ -1,0 +1,24 @@
+if [ self(Darkmoon Zeppelin:339).active & enemy(Tonsa:1282).active ]
+    ability(Bombing Run:647) [ round = 1 ]
+    ability(Decoy:334) [ round = 2 ]
+    ability(Missile:777)
+endif
+if [ self(Darkmoon Zeppelin:339).active & enemy(Chirps:1281).active ]
+    change(Kun-Lai Runt:1166) [ self.aura(Asleep:926).exists ]
+    ability(Missile:777)
+endif
+if [ self(Kun-Lai Runt:1166).active & enemy(Chirps:1281).active ]
+    ability(Rampage:124) [ self.ability(Rampage:124).usable ]
+    ability(Thrash:202)
+endif
+if [ self(Kun-Lai Runt:1166).active & enemy(Brewly:1280).active ]
+    change(Viscidus Globule:1154) [ self(Kun-Lai Runt:1166).dead ]
+    ability(Rampage:124) [ self.ability(Rampage:124).usable ]
+    ability(Mangle:314) [ !enemy.aura(Mangle:313).exists ]
+    ability(Thrash:202)
+endif
+if [ self(Viscidus Globule:1154).active & enemy(Brewly:1280).active ]
+    ability(Creeping Ooze:448) [ !enemy.aura(Creeping Ooze:781).exists ]
+    ability(Acid Touch:756) [ !enemy.aura(Acid Touch:755).exists ]
+    ability(Creeping Ooze:448)
+endif
