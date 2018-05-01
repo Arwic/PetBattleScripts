@@ -1,0 +1,23 @@
+if [ self(Tiny Sporebat:167).active & enemy(Nairn:1288).active ]
+    ability(Creeping Fungus:743) [ !enemy.aura(Creeping Fungus:742).exists ]
+    ability(Shadow Slash:210)
+endif
+if [ self(Tiny Sporebat:167).active & enemy(Stormoen:1287).active ]
+    ability(Spore Shrooms:746)
+    ability(Creeping Fungus:743)
+endif
+change(Topaz Shale Hatchling:480) [ self(Tiny Sporebat:167).dead & enemy(Stormoen:1287).active ]
+if [ self(Topaz Shale Hatchling:480).active & enemy(Stormoen:1287).active ]
+    ability(Stoneskin:436) [ !self.aura(Stoneskin:435).exists ]
+    ability(Poison Spit:380) [ !enemy.aura(Poisoned:379).exists ]
+    ability(Burn:113)
+endif
+if [ self(Topaz Shale Hatchling:480).active & enemy(Summer:1286).active ]
+    ability(Stoneskin:436) [ enemy.aura(Dodge:311).exists ]
+    ability(Poison Spit:380) [ !enemy.aura(Poisoned:379).exists ]
+    ability(Burn:113)
+endif
+if [ self(Darkmoon Zeppelin:339).active & enemy(Summer:1286).active ]
+    ability(Decoy:334) [ enemy.aura(Dodge:311).exists ]
+    ability(Missile:777)
+endif
