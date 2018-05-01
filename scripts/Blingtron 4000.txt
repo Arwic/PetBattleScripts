@@ -1,0 +1,16 @@
+if [ self(Legs:308).active & enemy(Au:1278).active ]
+    ability(Whirlpool:513)
+    ability(Pump:297)
+endif
+change(Electrified Razortooth:1179) [ self(Legs:308).active & enemy(Banks:1279).active ]
+if [ self(Electrified Razortooth:1179).active & enemy(Banks:1279).active ]
+    ability(Devour:538) [ !self.ability(Blood in the Water:423).usable ]
+    ability(Blood in the Water:423) [ enemy.aura(Bleeding:491).exists ]
+    ability(Rip:803)
+endif
+change(Water Waveling:535) [ self(Electrified Razortooth:1179).active & enemy(Lil' B:1277).active ]
+if [ self(Water Waveling:535).active & enemy(Lil' B:1277).active ]
+    ability(Geyser:418)
+    ability(Frost Shock:416) [ !enemy.aura(Frost Shock:415).exists ]
+    ability(Ice Lance:413) [ enemy.aura(Frost Shock:415).exists ]
+endif
