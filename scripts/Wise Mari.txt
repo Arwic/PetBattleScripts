@@ -1,0 +1,21 @@
+if [ self(Anubisath Idol:1155).active & enemy(Carpe Diem:1296).active ]
+    ability(Sandstorm:453)
+    ability(Crush:406)
+endif
+ability(Crush:406) [ self(Anubisath Idol:1155).active & enemy(Spirus:1298).active ]
+change(Mechanical Pandaren Dragonling:844) [ self(Anubisath Idol:1155).dead & enemy(Spirus:1298).active ]
+if [ self(Mechanical Pandaren Dragonling:844).active & enemy(Spirus:1298).active ]
+    ability(Thunderbolt:779) [ enemy.aura(Soul Ward:750).exists ]
+    ability(Breath:115)
+endif
+if [ self(Mechanical Pandaren Dragonling:844).active & enemy(River:1297).active ]
+    ability(Decoy:334) [ !enemy.ability(Whirlpool:513).usable & enemy.ability(Dive:564).usable ]
+    ability(Breath:115)
+endif
+change(Viscidus Globule:1154) [ self(Mechanical Pandaren Dragonling:844).dead & enemy(River:1297).active ]
+if [ self(Viscidus Globule:1154).active & enemy(River:1297).active ]
+    ability(Creeping Ooze:448) [ !enemy.aura(Creeping Ooze:781).exists ]
+    ability(Acid Touch:756) [ !enemy.aura(Acid Touch:755).exists ]
+    ability(Weakness:471)
+    ability(Creeping Ooze:448)
+endif
