@@ -1,0 +1,8 @@
+ability(Whirlpool:513) [self(Pandaren Water Spirit:868).active]
+ability(Dive:564) [self(Pandaren Water Spirit:868).active]
+ability(Water Jet:118) [self(Pandaren Water Spirit:868).active]
+change(Blazehound:2086) [self(Pandaren Water Spirit:868).dead & !self(Rapana Whelk:743).active]
+change(Rapana Whelk:743)
+ability(Shell Shield:310) [self(Rapana Whelk:743).aura(Shell Shield:309).duration <2]
+ability(Dive:564)
+ability(Absorb:449)
